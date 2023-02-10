@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jquery js</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- not work -->
+    <!-- <style type="text/css" href="./style.css"></style> --> 
+    <script src="../jquery-1.11.1.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js" integrity="sha512-eKwZNCvuOhxcqGTXAudC9WH2KUKf8Id1cqNoMc6DKZuN8upL22xj3ZkJdckyDd3Gjsi1QHKZ3ug0XQHQkGRNJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js" integrity="sha512-nhY06wKras39lb9lRO76J4397CH1XpRSLfLJSftTeo3+q2vP7PaebILH9TqH+GRpnOhfAGjuYMVmVTOZJ+682w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <!-- <script src="./script.js">  </script> -->
+    <script >  
+        // 4
+        // var iQuery = function(){
+        //     // return {}
+        //     var obj = {
+        //         ready : function(){
+        //             console.log("I am ready!!!");
+        //         }
+        //     };
+        //     return obj;
+        // };
+        // iQuery().ready();
+        // 5
+        // var iQuery = function(){
+        //     // return {}
+        //     var obj = {
+        //         ready : function( func ){
+        //             // console.log("I am ready!!!");
+        //             func()
+        //         }
+        //     };
+        //     return obj;
+        // };
+        // iQuery().ready(function(){
+        //     console.log("I am ready!!!");
+        // });
+        // 6
+        var iQuery = function(dom){
+            // return {}
+            var obj = {
+                ready : function( func ){
+                    // console.log("I am ready!!!");
+                    // func()
+                    if(typeof dom.onload === "function"){
+                        var oldFunc = dom.onload;
+                        dom.onload = function(){
+                            func();
+                            oldFunc()
+                        }
+                    }else {
+                        dom.onload = func;
+                    }
+                }
+            };
+            return obj;
+        };
+        iQuery(window).ready(function () {
+            alert("第一调用");
+        });
+
+        iQuery(window).ready(function () {
+            alert("第二调用");
+        });
+    // $(document).ready(function(){
+    //     // 1
+    //     // $("#btnClick").click(function(){
+    //     //     $("div").hide();
+    //     //     console.log("wo shi jQuery!")
+    //     // })
+    //     // 2
+    //     // jQuery("#btnClick").click(function(){
+    //     //     console.log("wo shi jQuery!")
+    //     // })
+    //     
+ 
+    // })
+    </script>
+
+
+</head>
+<body>
+<input type="button" value="button" id="btnClick"/>
+<!-- <div></div> -->
+</body>
+</html>
