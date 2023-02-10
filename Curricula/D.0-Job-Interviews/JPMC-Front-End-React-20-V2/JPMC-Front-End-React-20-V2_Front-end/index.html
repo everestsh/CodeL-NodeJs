@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Counter!</title>
+
+    
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div class="main">
+        <div class="data">
+            <input type="number" class="value" id="value-1" placeholder="First value" >
+            <span class="divider"> / </span>
+            <input type="number" class="value" id="value-2" placeholder="Second value" >
+        </div>
+
+        <p>
+            <button type="button" id="divide-btn" >Divide</button>
+        </p>
+        <div class=""result>
+            <span class="result-label" >Result: </span>
+            <span class="result-value" ></span>
+        </div>
+    </div>
+
+    <script>
+        let random = Math.random();
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = "script.js?ts="+random;
+        document.getElementsByTagName("head")[0].append(s);
+        console.log("index = ", s, document)
+        setTimeout(function(){
+            window.divider.init();
+        }, 1500);
+    </script>
+
+  </body>
+</html>

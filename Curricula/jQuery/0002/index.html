@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jquery js</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- not work -->
+    <!-- <style type="text/css" href="./style.css"></style> --> 
+    <script src="../jquery-1.11.1.min.js"></script>
+    <!-- <script src="./script.js">  </script> -->
+    <script >  
+    // 1. 入口函数的方式
+    $(document).ready(function () {
+
+        $("#demo").click(function () {
+            $("div").show(1000).html("我是内容");
+        });
+    });
+    </script>
+
+
+</head>
+<body>
+<input type="button" value="button" id="demo"/>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
