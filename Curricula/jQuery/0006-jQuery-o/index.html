@@ -12,77 +12,29 @@
 
     <!-- <script src="./script.js">  </script> -->
     <script >  
-        // 4
-        // var iQuery = function(){
-        //     // return {}
-        //     var obj = {
-        //         ready : function(){
-        //             console.log("I am ready!!!");
-        //         }
-        //     };
-        //     return obj;
-        // };
-        // iQuery().ready();
-        // 5
-        // var iQuery = function(){
-        //     // return {}
-        //     var obj = {
-        //         ready : function( func ){
-        //             // console.log("I am ready!!!");
-        //             func()
-        //         }
-        //     };
-        //     return obj;
-        // };
-        // iQuery().ready(function(){
-        //     console.log("I am ready!!!");
-        // });
-        // 6
-        var iQuery = function(dom){
-            // return {}
-            var obj = {
-                ready : function( func ){
-                    // console.log("I am ready!!!");
-                    // func()
-                    if(typeof dom.onload === "function"){
-                        var oldFunc = dom.onload;
-                        dom.onload = function(){
-                            func();
-                            oldFunc()
-                        }
-                    }else {
-                        dom.onload = func;
-                    }
-                }
-            };
-            return obj;
-        };
-        iQuery(window).ready(function () {
-            alert("第一调用");
-        });
-
-        iQuery(window).ready(function () {
-            alert("第二调用");
-        });
-    // $(document).ready(function(){
-    //     // 1
-    //     // $("#btnClick").click(function(){
-    //     //     $("div").hide();
-    //     //     console.log("wo shi jQuery!")
-    //     // })
-    //     // 2
-    //     // jQuery("#btnClick").click(function(){
-    //     //     console.log("wo shi jQuery!")
-    //     // })
-    //     
- 
-    // })
+        $(document).ready(function(){
+            var bg = $("#b03").css("color");
+            console.log(bg);
+            var bg = $("#b03").css("font-size");
+            console.log(bg);
+            $(".liItem").css("background", "red")
+            $("li").css("background","red");
+        })
     </script>
 
 
 </head>
 <body>
 <input type="button" value="button" id="btnClick"/>
-<!-- <div></div> -->
+<ul>
+    <li class="liItem aa" id="demo">兄弟很多1</li>
+    <li>兄弟很多2</li>
+    <li id="b03">兄弟很多3</li>
+    <li>兄弟很多4</li>
+    <li class="liItem">兄弟很多5</li>
+    <li id="demo1">兄弟很多6</li>
+    <li>兄弟很多7</li>
+    <li class="liItem">兄弟很多8</li>
+</ul>
 </body>
 </html>
