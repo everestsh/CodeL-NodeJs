@@ -2,7 +2,7 @@
   
  ## 0001 
 
-
+The window.onload event is executed after the entire HTML document is fully loaded, so any element of the HTML document can be obtained
 
 ```
 //1, Triggered when the HTML document is fully loaded
