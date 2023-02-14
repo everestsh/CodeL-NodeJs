@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>extend.js</title>
+    <link href="./style.css" type="text/css" rel="stylesheet" />
+    <script src="./myCreate.js"></script>
+    <!-- <script src="./task.js"></script> -->
+</head>
+<body>
+    <h1>extendDeeply</h1>
+    <input id="demo" type="button" value="run this cmd in browser" />
+    <div>var c = myCreate(p);</div>
+    <div>c.name;</div>
+    <div>function FF(){};</div>
+    <div>var ff = new FF();</div>
+    <div>ff.__prototype === FF.prototype; // false;</div>
+    <div>ff.__proto__ === FF.prototype; // true</div>
+    <div>ff.__proto__ === ff.constructor.prototype; // true</div>
+</body>
+</html>
