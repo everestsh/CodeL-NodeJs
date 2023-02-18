@@ -13,12 +13,21 @@
     <!-- <script src="./script.js">  </script> -->
     <script >  
         $(document).ready(function(){
-            var bg = $("#b03").css("color");
-            console.log(bg);
-            var bg = $("#b03").css("font-size");
-            console.log(bg);
-            $(".liItem").css("background", "red")
-            $("li").css("background","red");
+            // $("li").css("font-size")
+            // $("li").css("background-color", "red");
+            // $("li").css({
+            //     "background-color": "red",
+            //     "font-size": "20px",
+            //     "color": "white"
+            // })
+            $("li").css("font-size", function(index, value){
+                // console.log(index);
+                // console.log(value);
+                // return (index+1) *12 + "px"
+                if(index===2){
+                    return (index+1) *12 + "px"
+                }
+            })
         })
     </script>
 
@@ -26,15 +35,18 @@
 </head>
 <body>
 <input type="button" value="button" id="btnClick"/>
+  <!-- ul>li{xidihenf $}*8 -->
+  <!-- <ul>
+    <li style="background-color: #000;" >I am element 1</li>
+    <li style="background-color: pink;" >I am element 2</li>
+    <li style="background-color: green;" >I am element 3</li>
+    <li style="background-color: orange;" >I am element 4</li>
+</ul> -->
 <ul>
-    <li class="liItem aa" id="demo">兄弟很多1</li>
-    <li>兄弟很多2</li>
-    <li id="b03">兄弟很多3</li>
-    <li>兄弟很多4</li>
-    <li class="liItem">兄弟很多5</li>
-    <li id="demo1">兄弟很多6</li>
-    <li>兄弟很多7</li>
-    <li class="liItem">兄弟很多8</li>
+    <li >I am element 1</li>
+    <li >I am element 2</li>
+    <li >I am element 3</li>
+    <li >I am element 4</li>
 </ul>
 </body>
 </html>

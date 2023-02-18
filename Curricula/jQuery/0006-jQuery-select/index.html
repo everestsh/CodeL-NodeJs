@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jquery js</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- not work -->
+    <!-- <style type="text/css" href="./style.css"></style> --> 
+    <script src="../jquery-1.11.1.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js" integrity="sha512-eKwZNCvuOhxcqGTXAudC9WH2KUKf8Id1cqNoMc6DKZuN8upL22xj3ZkJdckyDd3Gjsi1QHKZ3ug0XQHQkGRNJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js" integrity="sha512-nhY06wKras39lb9lRO76J4397CH1XpRSLfLJSftTeo3+q2vP7PaebILH9TqH+GRpnOhfAGjuYMVmVTOZJ+682w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <!-- <script src="./script.js">  </script> -->
+    <script >  
+        $(document).ready(function(){
+            var bg = $("#b03").css("color");
+            console.log(bg);
+            var bg = $("#b03").css("font-size");
+            console.log(bg);
+            $(".liItem").css("background", "red")
+            // $("li").css("background","red");
+            // $("*").css("font-size", "20px");
+            $(".liItem, div").css("background", "blue")
+        })
+    </script>
+
+
+</head>
+<body>
+<input type="button" value="button" id="btnClick"/>
+  <!-- ul>li{xidihenf $}*8 -->
+<ul>
+    <li class="liItem aa" id="demo">兄弟很多1</li>
+    <li>兄弟很多2</li>
+    <li id="b03">兄弟很多3</li>
+    <li>兄弟很多4</li>
+    <li class="liItem">兄弟很多5</li>
+    <li id="demo1">兄弟很多6</li>
+    <li>兄弟很多7</li>
+    <li class="liItem">兄弟很多8</li>
+  
+</ul>
+</body>
+</html>

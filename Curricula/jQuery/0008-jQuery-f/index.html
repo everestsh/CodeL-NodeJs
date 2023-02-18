@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jquery js</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- not work -->
+    <!-- <style type="text/css" href="./style.css"></style> --> 
+    <script src="../jquery-1.11.1.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js" integrity="sha512-eKwZNCvuOhxcqGTXAudC9WH2KUKf8Id1cqNoMc6DKZuN8upL22xj3ZkJdckyDd3Gjsi1QHKZ3ug0XQHQkGRNJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js" integrity="sha512-nhY06wKras39lb9lRO76J4397CH1XpRSLfLJSftTeo3+q2vP7PaebILH9TqH+GRpnOhfAGjuYMVmVTOZJ+682w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <!-- <script src="./script.js">  </script> -->
+    <script >  
+        $(document).ready(function(){
+            // $("li").css("font-size")
+            // $("li").css("background-color", "red");
+            // $("li").css({
+            //     "background-color": "red",
+            //     "font-size": "20px",
+            //     "color": "white"
+            // })
+            $("li").css("font-size", function(index, value){
+                // console.log(index);
+                // console.log(value);
+                // return (index+1) *12 + "px"
+                if(index===2){
+                    return (index+1) *12 + "px"
+                }
+            })
+        })
+    </script>
+
+
+</head>
+<body>
+<input type="button" value="button" id="btnClick"/>
+  <!-- ul>li{xidihenf $}*8 -->
+  <!-- <ul>
+    <li style="background-color: #000;" >I am element 1</li>
+    <li style="background-color: pink;" >I am element 2</li>
+    <li style="background-color: green;" >I am element 3</li>
+    <li style="background-color: orange;" >I am element 4</li>
+</ul> -->
+<ul>
+    <li >I am element 1</li>
+    <li >I am element 2</li>
+    <li >I am element 3</li>
+    <li >I am element 4</li>
+</ul>
+</body>
+</html>
