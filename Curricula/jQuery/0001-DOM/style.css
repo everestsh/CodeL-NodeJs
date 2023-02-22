@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    outline: red 1px solid;
 }
 div {
     height: 200px;
