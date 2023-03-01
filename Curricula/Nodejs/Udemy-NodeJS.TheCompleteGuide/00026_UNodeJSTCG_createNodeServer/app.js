@@ -1,24 +1,22 @@
-const fetchData = () => {
-    const promise = new Promise((resolve, reject)=>{
-        setTimeout(()=>{
-            resolve('Done!');
-        }, 1500)
-    });
-    return promise;
-}
 
-setTimeout(()=>{
-    console.log('Timer is done!')
-    fetchData()
-        .then(text=>{
-            console.log(text);
-            return fetchData();
-        })
-        .then(text1=>{
-            console.log(text1);
-        });
-}, 2000);
+const http = require('http')
 
-console.log('Hello!');
-console.log('Hi!');
 
+// m 1
+// function rqListener(req, res){
+// }
+// http.createServer(rqListener);
+
+// m 2
+// http.createServer(function(req, res){
+// })
+
+// m 3
+// http.createServer((req, res)=>{
+// });
+
+const server = http.createServer((req, res)=>{
+    // console.log(req);
+    console.log("hello");
+});
+server.listen(3000);
